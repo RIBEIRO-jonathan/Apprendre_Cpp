@@ -1,7 +1,8 @@
 #include <iostream>
 #include <iomanip>
-#include<fstream>
-#include<string>
+#include <fstream>
+#include <string>
+
 using namespace std; // évite d'écrire std::cout
 
 int main()
@@ -81,7 +82,7 @@ return 0;.
 
         cout << "+"<<setfill('-')<<setw(30)<<"+" << setfill('-') << setw(4) << "+" << setfill('-') << setw(5)<< setfill('-') << "+"<< setw(6) << "+"<<setfill(' ') << endl;
 
-        do{
+        do {
 
             leFichier >> pays >> nbOr >> nbArgent >> nbBronze;
 
@@ -92,7 +93,7 @@ return 0;.
 
             }
 
-        }while(!leFichier.eof());
+        } while(!leFichier.eof());
         cout << "+"<<setfill('-')<<setw(30)<<"+" << setfill('-') << setw(4) << "+" << setfill('-') << setw(5)<< setfill('-') << "+"<< setw(6) << "+"<<setfill(' ') << endl;
 
 
