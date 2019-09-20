@@ -1,0 +1,19 @@
+#ifndef BARRERONDECREUSE_H
+#define BARRERONDECREUSE_H
+#include "barre.h"
+#include "barreronde.h"
+
+
+class BarreRondeCreuse: public BarreRonde
+{
+public:
+    BarreRondeCreuse(string _reference, int _longueur,float _densite, string _alliage, int _diametre,int _diametre_creux);
+    double CalculerSectionPleine();
+    double CalculerSectionCreuse();
+    double CalculerMasse();
+    double CalculerSection();
+private:
+    double diametre_creux;
+};
+
+#endif // BARRERONDECREUSE_H

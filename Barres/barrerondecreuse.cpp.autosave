@@ -1,0 +1,34 @@
+#include "barrerondecreuse.h"
+#include <iostream>
+#include <math.h>
+using namespace std;
+
+BarreRondeCreuse::BarreRondeCreuse(string _reference, int _longueur, float _densite, string _alliage, int _diametre_plein,int _diametre_creux):
+    BarreRonde(_reference,_longueur,_densite,_alliage,_diametre_plein),
+    diametre_creux(_diametre_creux)
+{
+    cout << "Constructeur de la classe BarreRonde_Creuse" << endl;
+}
+
+double BarreRondeCreuse::CalculerSectionPleine()
+{
+   double section = (M_PI * diametre * diametre) / 4;
+   return section;
+}
+double BarreRondeCreuse::CalculerSectionCreuse()
+{
+   double section = (M_PI * diametre_creux * diametre_creux) / 4;
+   return section;
+}
+double BarreRondeCreuse::CalculerSection(){
+    double section_creuse = CalculerSectionCreuse();
+     double section_pleine = CalculerSectionPleine();
+     double section = section_pleine - section_creuse;
+     return section;
+}
+double BarreRondeCreuse::CalculerMasse()
+{
+    double section = CalculerSection();
+    double masse = longueur * section * densite;
+    return masse;
+}
